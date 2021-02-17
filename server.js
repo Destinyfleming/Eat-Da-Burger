@@ -12,6 +12,7 @@ app.use(express.json());
 app.engine("handlebars", exphbs({ defaultLayout: "main" }));
 app.set("view engine", "handlebars");
 
+app.use(routes);
 
 app.listen(PORT, function() {
     console.log("Server listening on: http://localhost:" + PORT);

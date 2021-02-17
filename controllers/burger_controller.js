@@ -3,15 +3,33 @@ const burger = require("./burger.js");
 const express = require("./orm.js");
 var router = express.Router();
 
-// Home page route.
-router.get('/', function (req, res) {
-  res.send('burger home page');
-})
+router.get("/", function (req, res) {
+    burger.selectAll(function (data) {
+        var burgerData = {
+            burgers: data
+          };
+        console.log(burgerData);
+        res.render("index", burgerData);
+    });
+});
 
-// About page route.
-router.get('/devour', function (req, res) {
-  res.send('yum!');
-})
+router.put("/api/burgers/:id", function (req, res) {
+    var objId = "id = " + req.params.id;
+    burger.updateOne({
+        devoured: true
+    }, objId, function (data) {
+        res.redirect("/");
 
-//export router
+    });
+});
+
+router.post("/api/burgers", function (req, res) {
+    burger.insertOne(["burger_name", "devoured"], 
+    [req.body.burger_name, req.body.devoured], function(result) {
+        // Send back the ID of the new burger
+        res.json({ id: result.insertId });
+    });
+});
+
 module.exports = router;
+
