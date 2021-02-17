@@ -1,11 +1,12 @@
-var connection = require("./connection.js");
+const connection = require("../config/connection.js");
 
-var orm = {
+const orm = {
    //selectAll()
+    
    //insertOne()
+   
    //updateOne()
 }
-
 
 
 module.exports = orm;
