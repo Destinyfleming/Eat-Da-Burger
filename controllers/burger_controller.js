@@ -1,7 +1,7 @@
 
-const burger = require("./burger.js");
-const express = require("./orm.js");
-var router = express.Router();
+const burger = require("../models/burger.js");
+const express = require("../config/orm.js");
+var router = require('express').Router()
 
 router.get("/", function (req, res) {
     burger.selectAll(function (data) {
@@ -27,7 +27,7 @@ router.post("/api/burgers", function (req, res) {
     burger.insertOne(["burger_name", "devoured"], 
     [req.body.burger_name, req.body.devoured], function(result) {
         // Send back the ID of the new burger
-        res.json({ id: result.insertId });
+        res.redirect("/");
     });
 });
 

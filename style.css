@@ -1,0 +1,15 @@
+body {
+    font-family: sans-serif;
+    background-color: rgb(209, 232, 245);
+}
+
+#list-devoured-burgers {
+    font-weight: bold;
+    color: rgb(194, 3, 3);
+    font-size: x-large;
+}
+
+#list-available-burgers {
+    color: rgba(248, 248, 0, 0.288);
+    font-size: small;
+}
