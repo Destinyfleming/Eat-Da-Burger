@@ -11,8 +11,8 @@ const burger = {
         cb(res);
       });
     },
-    updateOne: function (boolean, condition, cb) {
-      orm.updateOne("burgers", "devoured", boolean, condition, function (res) {
+    updateOne: function(devoured, cb){
+      orm.updateOne(devoured, function(res){
         cb(res);
       });
     },
