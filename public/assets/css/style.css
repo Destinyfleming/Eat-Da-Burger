@@ -1,24 +1,45 @@
-* {
-    box-sizing: border-box;
-    color: black;
-    font-family: 'Courier New', Courier, monospace;
-  }
-
-body { 
-    background-image: url(https://png.pngtree.com/png-clipart/20190906/original/pngtree-cartoon-burger-delicious-png-png-image_4566400.jpg) ;
-    background-color: #ffffff;  
+html {
+    background-color: lightblue;
 }
 
-.burger-button{
-    font-weight: bold;
-}
-#list-devoured-burgers{
-    color: red;
-    font-size: small;
+body {
+   width: 75%;
+   text-align: center;
+   display: flex;
+   min-height: 100vh;
+   font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
-#list-available-burgers{
-    color: rgb(0, 255, 21);
-    font-size: large;
-    font-weight: bold;
+h1 {
+    font-size: 50px;
+    margin: 50px;
+}
+
+.Available-burgers {
+    font-size: 20px;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #76f88a;
+}
+
+.eaten-burger {
+    font-size: 20px;
+    border-radius: 25px;
+    margin: 10px;
+    padding: 10px;
+    background-color: #fa9583;
+}
+
+h2 {
+    font-size: 40px;
+    margin: 50px;
+}
+
+.addButton {
+    font-size: 20px;
+    border-radius: 25px;
+    width: 100%;
+    padding: 10px;
+    background-color: lightblue;
 }
