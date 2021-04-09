@@ -1,5 +1,5 @@
-INSERT INTO cats (name) VALUES ('BBQ Burger');
-INSERT INTO cats (name) VALUES ('Hawaiian Burger');
-INSERT INTO cats (name, devoured) VALUES ('Veggie Burger', true);
-INSERT INTO cats (name, devoured) VALUES ('Cheese Burger', true);
+INSERT INTO burgers (name) VALUES ('BBQ Burger');
+INSERT INTO burgers (name) VALUES ('Hawaiian Burger');
+INSERT INTO burgers (name, devoured) VALUES ('Veggie Burger', true);
+INSERT INTO burgers (name, devoured) VALUES ('Cheese Burger', true);
 
