@@ -1,53 +1,50 @@
-<div class="jumbotron bg-warning ">
-    <div class="container">
-        <h1>Eat Da Burger</h1>
-    </div>
-</div>
 <div class="card" >
   <div class="card-body">
     <h5 class="card-title">Burgers not yet DEVOURED</h5>
     <div class="card-text"> 
-                    <ul>
+                    <ul class="list-group">
+                      <li class="list-group-item active">
                         {{#each burgers}}
                         {{#unless devoured}}
                         {{> burger/burger-block devour=true}}
                         {{/unless}}
                         {{/each}}
+                      </li>
                     </ul>
     </div>
   </div>
 </div>
+
 <div class="card" >
   <div class="card-body">
-    <h5 class="card-title">Eaten burgers</h5>
+    <h5 class="card-title">Already Eaten Burgers</h5>
     <div class="card-text"> 
-                    <ul>
+                    <ul class="list-group">
+                        <li class="list-group-item active">
                         {{#each burgers}}
                         {{#if devoured}}
                         {{> burger/burger-block devour=false}}
                         {{/if}}
                         {{/each}}
+                        </li>
                     </ul>
     </div>
   </div>
 </div>
+
 <div class="container">
-    
     <div class="row container mb-5">
         <div class="col-8">
             <div class="card">
-                <h2 class="card-title">Add a Burger</h2>
+                <h2 class="card-title" id = "new-b">Wanna Add A Burger??</h2>
                 <hr>
                 <div class="card-body">
                     <form class="create-form">
                         <div class="form-group">
-                            <label for="brgr">Burger Name:</label>
-                            <input type="text" class="form-control" id="brgr" name="burger_name">
+                            <label for="burger">Burger Name:</label>
+                            <input type="text" class="form-control" id="burger" name="burger_name">
                         </div>
-                        <div class="form-group">
-                            <label for="dev">Hungry?</label><br>
-                        </div>
-                        <button class="create-form btn btn-danger" type="submit">Add Burger</button>
+                        <button class="create-form btn btn-primary" type="submit">Add Burger</button>
                     </form>
                 </div>
             </div>
